@@ -1,0 +1,35 @@
+# when debug is true, server will log request headers
+debug: false
+
+# api server listen address
+server:
+  host: "0.0.0.0"
+  port: "9000"
+
+# fabric connection config
+fabric:
+  ccPath: "/Users/hmac/.fabricappworkdir/connection.yaml"
+  walletPath: "/Users/hmac/.fabricappworkdir/wallet"
+  orgName: "org1"
+  mspId: "org1MSP"
+
+chaincode:
+  channel: "corpidapp"
+  chaincode: "corpid"
+
+admin:
+  username: "orgadmin"
+  password: "passwd"
+
+couchdb:
+  hostPort: "localhost:5984"
+  user: "admin"
+  passwd: "passwd"
+  protocol: "http"
+
+# jwt
+jwt:
+  secret: "emali.io.secret"
+  # hours
+  # 10days = 10 * 24
+  expireHours: 240
