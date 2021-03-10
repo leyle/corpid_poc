@@ -30,15 +30,17 @@ func (c *Contract) Create(ctx contractapi.TransactionContextInterface, args stri
 	}
 
 	// check if data has already existed
-	exists, err := c.IsExist(ctx, form.Id)
-	if err != nil {
-		return err
-	}
-	if exists {
-		err = fmt.Errorf("data id[%s] has existed, create new data failed", form.Id)
-		fmt.Println(err.Error())
-		return err
-	}
+	/*
+		exists, err := c.IsExist(ctx, form.Id)
+		if err != nil {
+			return err
+		}
+		if exists {
+			err = fmt.Errorf("data id[%s] has existed, create new data failed", form.Id)
+			fmt.Println(err.Error())
+			return err
+		}
+	*/
 
 	// save data
 	state := &DIDLedgerIn{
